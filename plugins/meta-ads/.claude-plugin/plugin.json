@@ -1,0 +1,13 @@
+{
+  "name": "meta-ads",
+  "description": "Meta's official ads MCP. You sign in as yourself; campaigns land paused. No developer app.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Uboros",
+    "url": "https://uboros.com"
+  },
+  "homepage": "https://github.com/workeronai/uboros-claude-plugins",
+  "repository": "https://github.com/workeronai/uboros-claude-plugins",
+  "license": "MIT",
+  "keywords": ["meta", "ads", "mcp"]
+}

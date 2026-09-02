@@ -1,0 +1,19 @@
+{
+  "name": "uboros",
+  "owner": {
+    "name": "Uboros",
+    "url": "https://uboros.com"
+  },
+  "metadata": {
+    "description": "Uboros Claude plugins. Ships Meta's official ads MCP without a WorkHold developer app."
+  },
+  "plugins": [
+    {
+      "name": "meta-ads",
+      "source": "./plugins/meta-ads",
+      "description": "Connects Claude to Meta's hosted ads MCP (https://mcp.facebook.com/ads). Campaigns land paused.",
+      "version": "1.0.0",
+      "keywords": ["meta", "ads", "mcp", "facebook", "uboros"]
+    }
+  ]
+}
