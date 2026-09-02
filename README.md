@@ -10,7 +10,15 @@ Uboros does **not** create a Meta developer app. Claude is already enrolled as t
 curl -fsSL https://raw.githubusercontent.com/workeronai/uboros-claude-plugins/main/install.sh | bash
 ```
 
-Then quit and reopen Claude Desktop. Connect **Meta Ads**. Leave OAuth client id blank.
+That installs the Claude Code plugin if `claude` is on PATH, copies `https://mcp.facebook.com/ads`, and opens [Claude Connectors](https://claude.ai/settings/connectors).
+
+Claude Desktop does **not** read a remote HTTP MCP from `claude_desktop_config.json` — that file only launches local stdio servers. Add a custom connector:
+
+- Name: `Meta Ads`
+- URL: `https://mcp.facebook.com/ads`
+- Leave OAuth client id blank
+
+Quit and reopen Claude Desktop, then Connect **Meta Ads**.
 
 ## 2. Local zip
 
