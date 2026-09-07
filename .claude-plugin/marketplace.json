@@ -4,6 +4,7 @@
     "name": "Uboros",
     "url": "https://uboros.com"
   },
+  "description": "Uboros Claude plugins. Connect Uboros and Meta's official ads MCP; campaigns land paused.",
   "metadata": {
     "description": "Uboros Claude plugins. Ships Meta's official ads MCP without a WorkHold developer app."
   },
@@ -13,7 +14,25 @@
       "source": "./plugins/meta-ads",
       "description": "Connects Claude to Meta's hosted ads MCP (https://mcp.facebook.com/ads). Campaigns land paused.",
       "version": "1.0.0",
-      "keywords": ["meta", "ads", "mcp", "facebook", "uboros"]
+      "keywords": [
+        "meta",
+        "ads",
+        "mcp",
+        "facebook",
+        "uboros"
+      ]
+    },
+    {
+      "name": "uboros",
+      "source": "./plugins/uboros",
+      "description": "Connects Claude to Uboros and to Meta Ads, and teaches it the paused-publish loop. Campaigns land paused.",
+      "version": "1.0.0",
+      "keywords": [
+        "advertising",
+        "meta-ads",
+        "creative",
+        "uboros"
+      ]
     }
   ]
 }
