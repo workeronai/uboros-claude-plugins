@@ -1,8 +1,42 @@
 # Uboros Claude plugins
 
-Plug-and-play marketplace for [Meta’s official ads MCP](https://mcp.facebook.com/ads).
+Two plugins. Both land campaigns **paused**.
 
-Uboros does **not** create a Meta developer app. Claude is already enrolled as the OAuth client. You sign in as yourself. Campaigns land **paused**.
+| Plugin | Connects | Use it when |
+| --- | --- | --- |
+| **`uboros`** | Uboros **and** [Meta ads MCP](https://mcp.facebook.com/ads) | You have an Uboros account. This is the one you want. |
+| `meta-ads` | Meta ads MCP only | You want Meta's connector on its own. |
+
+`uboros` is a superset of `meta-ads` — install one or the other, not both.
+
+Uboros does **not** create a Meta developer app. Claude is already enrolled as the OAuth client. You sign in as yourself.
+
+## `uboros` — the full loop
+
+```
+/plugin marketplace add workeronai/uboros-claude-plugins
+/plugin install uboros@uboros
+```
+
+Claude asks for **Uboros token** while installing. Mint it in Uboros under Publishing → Connect Claude; it is shown once and scoped to one brand.
+
+The token is **not** in either command — Claude stores it itself, so it never reaches your shell history or a file on disk.
+
+Then just ask: *"post my next approved creative."* The `publish-approved-creative` skill reads what Uboros has approved, builds the campaign from Uboros's own plan, creates it paused in Meta, and records it back so Uboros knows the campaign exists.
+
+### What it ships
+
+- MCP server `uboros` (HTTP, authenticated with your token)
+- MCP server `meta-ads` — `https://mcp.facebook.com/ads`, Meta's own sign-in
+- Skill `publish-approved-creative`
+
+### Generated, not hand-written
+
+`plugins/uboros/**` is emitted from [`workeronai/studio`](https://github.com/workeronai/studio) by `pnpm --filter @app/uboros plugin:emit`. Edit it there, not here — the MCP path and the publishing rules are defined alongside the server they point at, so a hand-edit here becomes a copy that drifts.
+
+---
+
+## `meta-ads` — Meta's connector alone
 
 ## 1. One-liner
 
@@ -57,7 +91,7 @@ claude plugin install --scope user -y meta-ads@uboros
 
 Connect once on a computer (one-liner or Claude Desktop → Settings → Connectors → Add custom connector, URL `https://mcp.facebook.com/ads`). Open the Claude app on your phone with the same account. Turn **Meta Ads** on for the chat.
 
-## What the plugin ships
+## What `meta-ads` ships
 
 - Remote MCP server `https://mcp.facebook.com/ads` (HTTP)
 - Skill `paused-publish`: campaign → ad set → creative → ad, all paused
@@ -69,5 +103,8 @@ Connect once on a computer (one-liner or Claude Desktop → Settings → Connect
 plugins/meta-ads/.claude-plugin/plugin.json
 plugins/meta-ads/.mcp.json
 plugins/meta-ads/skills/paused-publish/SKILL.md
+plugins/uboros/.claude-plugin/plugin.json          # generated — see above
+plugins/uboros/.mcp.json                           # generated
+plugins/uboros/skills/publish-approved-creative/SKILL.md   # generated
 install.sh
 ```

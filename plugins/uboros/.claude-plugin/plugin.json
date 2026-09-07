@@ -1,0 +1,29 @@
+{
+  "name": "uboros",
+  "version": "1.0.0",
+  "description": "Read your approved Uboros creative, create the Meta campaign paused, and record it back.",
+  "author": {
+    "name": "Uboros",
+    "url": "https://uboros.com"
+  },
+  "homepage": "https://uboros.com",
+  "repository": "https://github.com/workeronai/uboros-claude-plugins",
+  "license": "MIT",
+  "keywords": [
+    "advertising",
+    "meta-ads",
+    "creative",
+    "uboros"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "userConfig": {
+    "uboros_token": {
+      "type": "string",
+      "title": "Uboros token",
+      "description": "Mint it in Uboros under Publishing, Connect Claude. It is shown once and scoped to one brand.",
+      "required": true,
+      "sensitive": true
+    }
+  }
+}
