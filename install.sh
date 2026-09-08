@@ -11,7 +11,7 @@ REPO='workeronai/uboros-claude-plugins'
 MARKETPLACE='uboros'
 PLUGIN='meta-ads'
 MCP_URL='https://mcp.facebook.com/ads'
-CONNECTORS_URL='https://claude.ai/settings/connectors'
+CONNECTORS_URL='https://claude.ai/new#settings/customize-connectors'
 CONNECTOR_NAME='Meta Ads'
 
 copy_url() {

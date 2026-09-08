@@ -44,7 +44,7 @@ Then just ask: *"post my next approved creative."* The `publish-approved-creativ
 curl -fsSL https://raw.githubusercontent.com/workeronai/uboros-claude-plugins/main/install.sh | bash
 ```
 
-That installs the Claude Code plugin if `claude` is on PATH, copies `https://mcp.facebook.com/ads`, and opens [Claude Connectors](https://claude.ai/settings/connectors).
+That installs the Claude Code plugin if `claude` is on PATH, copies `https://mcp.facebook.com/ads`, and opens [Claude Connectors](https://claude.ai/new#settings/customize-connectors).
 
 Claude Desktop does **not** read a remote HTTP MCP from `claude_desktop_config.json` — that file only launches local stdio servers. Add a custom connector:
 
