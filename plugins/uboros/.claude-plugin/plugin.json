@@ -1,6 +1,6 @@
 {
   "name": "uboros",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Read your approved Uboros creative, create the Meta campaign paused, and record it back.",
   "author": {
     "name": "Uboros",
@@ -16,14 +16,5 @@
     "uboros"
   ],
   "skills": "./skills/",
-  "mcpServers": "./.mcp.json",
-  "userConfig": {
-    "uboros_token": {
-      "type": "string",
-      "title": "Uboros token",
-      "description": "Mint it in Uboros under Publishing, Connect Claude. It is shown once and scoped to one brand.",
-      "required": true,
-      "sensitive": true
-    }
-  }
+  "mcpServers": "./.mcp.json"
 }

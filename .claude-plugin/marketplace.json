@@ -26,7 +26,7 @@
       "name": "uboros",
       "source": "./plugins/uboros",
       "description": "Connects Claude to Uboros and to Meta Ads, and teaches it the paused-publish loop. Campaigns land paused.",
-      "version": "1.0.0",
+      "version": "2.0.0",
       "keywords": [
         "advertising",
         "meta-ads",
