@@ -2,10 +2,7 @@
   "mcpServers": {
     "uboros": {
       "type": "http",
-      "url": "https://app.uboros.com/api/mcp",
-      "headers": {
-        "Authorization": "Bearer ${user_config.uboros_token}"
-      }
+      "url": "https://app.uboros.com/api/mcp"
     },
     "meta-ads": {
       "type": "http",

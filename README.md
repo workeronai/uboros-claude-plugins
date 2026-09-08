@@ -18,9 +18,9 @@ Uboros does **not** create a Meta developer app. Claude is already enrolled as t
 /plugin install uboros@uboros
 ```
 
-Claude asks for **Uboros token** while installing. Mint it in Uboros under Publishing → Connect Claude; it is shown once and scoped to one brand.
+Claude signs you in itself: it opens an Uboros consent screen where you pick which brand the connection may read. **There is no token to paste anywhere.**
 
-The token is **not** in either command — Claude stores it itself, so it never reaches your shell history or a file on disk.
+Earlier versions asked for one at install. The MCP server does OAuth now, so the plugin holds no credential and there is no field to fill in.
 
 Then just ask: *"post my next approved creative."* The `publish-approved-creative` skill reads what Uboros has approved, builds the campaign from Uboros's own plan, creates it paused in Meta, and records it back so Uboros knows the campaign exists.
 
